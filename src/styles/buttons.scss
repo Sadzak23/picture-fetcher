@@ -1,0 +1,26 @@
+.btn {
+  background-color: $primaryColor;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  align-items: center;
+  justify-content: space-around;
+  &:focus {
+    outline: none;
+  }
+}
+.search-btn {
+  @extend .btn;
+  width: 70px;
+}
+.title-btn {
+  @extend .btn;
+  height: 30px;
+}
+.list-btn {
+  @extend .btn;
+  display: flex;
+  margin: 10px 0;
+  text-decoration: none;
+  width: 100px;
+}
