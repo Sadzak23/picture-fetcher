@@ -25,14 +25,17 @@ export const ListView = ({ title, GridView, data }) => {
         </div>
       </div>
       <div className={isGridView ? 'grid' : 'list'}>
-        {sortedData.map((photo, index) =>
-          isGridView ?
-            <Card photo={photo} key={photo.id} /> :
-            <div key={photo.id}>
-              <ListItem photo={photo} />
-              {index !== sortedData.length - 1 && <hr />}
-            </div>
-        )}
+        {sortedData.length > 0 ?
+          sortedData.map((photo, index) =>
+            isGridView ?
+              <Card photo={photo} key={photo.id} /> :
+              <div key={photo.id}>
+                <ListItem photo={photo} />
+                {index !== sortedData.length - 1 && <hr />}
+              </div>
+          ) :
+          <p>No images match search text</p>
+        }
       </div>
     </div>
   )
