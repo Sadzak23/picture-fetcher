@@ -1,5 +1,13 @@
+@import './styles/variables.scss';
 @import './styles/header.scss';
+@import './styles/search-bar.scss';
+@import './styles/title.scss';
+@import './styles/viewComponents.scss';
+@import './styles/card.scss';
+@import './styles/list-item.scss';
+@import './styles/footer.scss';
 
-html {
-  margin: 0px;
-}
+.content-container {
+  margin: auto;
+  width: max-content;
+};

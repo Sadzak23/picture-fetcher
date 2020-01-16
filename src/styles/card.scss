@@ -1,0 +1,39 @@
+$cardBorderRadius: 10px;
+
+.card {
+  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.5);
+  border-radius: $cardBorderRadius;
+  width: 300px;
+}
+.card-img-container {
+  position: relative;
+  height: 200px;
+}
+.card-img {
+  border-top-right-radius: $cardBorderRadius;
+  border-top-left-radius: $cardBorderRadius;
+  height: 200px;
+  width: 300px;
+}
+.card-author {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+  margin: 0;
+  font-weight: bold;
+}
+.card-info-container {
+  padding: 10px;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+}
+.card-info-icon {
+  width: 30px !important;
+}
+.card-info-text {
+  font-weight: 600;
+  margin: 0 0 0 5px;
+}

@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+import photoReducer from './redux/reducers/photosReducer';
+import { setPhotos } from './redux/actions/actions';
 import './index.scss';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(
+  photoReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+axios.get('https://picsum.photos/v2/list?page=4&limit=6')
+  .then((response) => store.dispatch(setPhotos(response.data)))
+
+// axios.get('https://picsum.photos/v2/list?page=8&limit=3')
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'));

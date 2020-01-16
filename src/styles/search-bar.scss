@@ -1,0 +1,17 @@
+.search-bar {
+  display: flex;
+  margin: 10px 0;
+  height: 35px;
+  padding-bottom: 10px;
+}
+.search-input {
+  border: none;
+  padding: 0 10px;
+  width: 300px;
+}
+.search-btn {
+  background-color: $primaryColor;
+  border: none;
+  color: #fff;
+  width: 70px;
+}

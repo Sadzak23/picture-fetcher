@@ -1,9 +1,5 @@
 .header-container {
-  background-color: #333;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  color: #ddd;
-  padding: 0 50px;
+  background-color: $offBlack;
+  display: flex;
+  justify-content: center;
 }

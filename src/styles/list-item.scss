@@ -1,0 +1,40 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 950px;
+  margin: 10px 0;
+  p {
+    margin: 0;
+    font-size: 10px;
+  }
+  h4 {
+    margin: 0;
+    font-size: 14px !important;
+    font-weight: 600;
+  }
+}
+.list-img {
+  height: 50px;
+  width: 100px;
+}
+.list-date {
+  text-align: center;
+  width: 40px;
+}
+.list-time {
+  color: $primaryColor;
+}
+.list-author {
+  margin-top: 3px !important;
+  font-weight: bold;
+}
+.list-btn {
+  background-color: $primaryColor;
+  border: 0;
+  margin: 10px 0;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 100px;
+}
