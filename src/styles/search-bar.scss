@@ -1,11 +1,11 @@
 .search-bar {
   display: flex;
-  margin: 10px 0;
-  height: 35px;
-  padding-bottom: 10px;
+  height: 5vh;
+  padding-bottom: 0.6rem;
 }
 .search-input {
   border: none;
-  padding: 0 10px;
-  width: 300px;
+  padding: 0 0.6rem;
+  width: 18rem;
+  font-size: 1rem;
 }

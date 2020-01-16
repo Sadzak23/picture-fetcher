@@ -1,30 +1,33 @@
 .list-item {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
-  min-width: 640px;
+  margin: 0.6rem 0;
+  min-width: 41.4rem;
   p {
     margin: 0;
-    font-size: 10px;
+    font-size: 0.6rem;
   }
   h4 {
     margin: 0;
-    font-size: 14px !important;
+    font-size: 0.9rem !important;
     font-weight: 600;
+  }
+  @media (max-width: 550px) {
+    min-width: 27.2rem;
   }
 }
 .list-img {
-  height: 50px;
-  width: 100px;
+  height: 3.2rem;
+  width: 6.4rem;
 }
 .list-date {
   text-align: center;
-  width: 40px;
+  width: 2.5rem;
 }
 .list-time {
   color: $primaryColor;
 }
 .list-author {
-  margin-top: 3px !important;
+  margin-top: 0.2rem !important;
   font-weight: bold;
 }

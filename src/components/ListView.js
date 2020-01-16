@@ -24,7 +24,7 @@ export const ListView = ({ title, GridView, data }) => {
           </button>
         </div>
       </div>
-      <div className={isGridView && 'grid'}>
+      <div className={isGridView ? 'grid' : 'list'}>
         {sortedData.map((photo, index) =>
           isGridView ?
             <Card photo={photo} key={photo.id} /> :

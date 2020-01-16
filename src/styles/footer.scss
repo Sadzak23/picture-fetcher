@@ -1,13 +1,13 @@
 .footer-container {
   background-color: $offBlack;
   display: flex;
+  color: #fff;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  margin-top: 30px;
+  height: 10vh;
 }
 
 .sponsor {
-  margin-left: 5px;
+  margin-left: 0.3rem;
   font-style: italic;
 }

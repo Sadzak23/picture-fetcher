@@ -3,14 +3,15 @@
 @import './styles/header.scss';
 @import './styles/search-bar.scss';
 @import './styles/title.scss';
-@import './styles/viewComponents.scss';
+@import './styles/list-view.scss';
 @import './styles/card.scss';
 @import './styles/list-item.scss';
 @import './styles/footer.scss';
 
 .content-container {
-  margin: auto;
+  margin: 5vh auto;
   width: max-content;
+  min-height: 70vh;
 }
 
 .loader-container {
