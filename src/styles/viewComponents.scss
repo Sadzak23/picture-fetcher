@@ -1,10 +1,12 @@
+.view-title-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: $title-margin;
+}
 .grid {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 200px 200px 200px;
   gap: 20px;
   justify-content: center;
-}
-
-.list {
-
 }

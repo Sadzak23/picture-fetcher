@@ -15,7 +15,9 @@
 }
 .title-btn {
   @extend .btn;
+  margin-left: 7px;
   height: 30px;
+  width: 50px;
 }
 .list-btn {
   @extend .btn;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { connect } from 'react-redux';
-import { Title, Header, GridView, Card, ListView, ListItem, Footer } from './components';
+import { Header, ListView, Footer } from './components';
 
 const App = ({ photos }) => {
   // const selection1 = photos.
@@ -9,10 +9,15 @@ const App = ({ photos }) => {
     <div className="App">
       <Header className='header-container' />
       <div className='content-container'>
-        <Title title='Hot Tickets' />
-        <GridView children={photos.map(photo => <Card photo={photo} key={photo.id} />)} />
-        <Title title='Upcoming Events' />
-        <ListView children={photos.map(photo => <ListItem photo={photo} key={photo.id} />)} />
+        <ListView
+          title='Hot Tickets'
+          GridView
+          data={photos}
+        />
+        <ListView
+          title='Upcoming Events'
+          data={photos}
+        />
       </div>
       <Footer />
     </div>

@@ -6,7 +6,7 @@ export const ListItem = ({ photo }) => {
   return (
     <div className='list-item'>
       <div style={{ display: 'flex' }}>
-        <img src={photo.download_url} alt={`A photo by ${photo.author}`} className='list-img' />
+        <img src={photo.download_url} alt={`Artwork by ${photo.author}`} className='list-img' />
         <div className='list-date'>
           <p>FEB</p>
           <h4>12</h4>
@@ -17,7 +17,7 @@ export const ListItem = ({ photo }) => {
           <h4>Width: {photo.width}, Height: {photo.height}</h4>
         </div>
       </div>
-      <a className='list-btn' href={photo.url} target='_blank'>
+      <a className='list-btn' href={photo.url} target='_blank' rel="noopener noreferrer">
         Find pics <FontAwesomeIcon icon={faAngleRight} size='xs' />
       </a>
     </div>

@@ -4,9 +4,9 @@ import { faCalendarAlt, faArchway } from '@fortawesome/free-solid-svg-icons';
 
 export const Card = ({ photo }) => (
   <div className='card'>
-    <a href={photo.url} target='_blank'>
+    <a href={photo.url} target='_blank' rel="noopener noreferrer">
       <div className='card-img-container'>
-        <img src={photo.download_url} alt={`A photo by ${photo.author}`} className='card-img' />
+        <img src={photo.download_url} alt={`Artwork by ${photo.author}`} className='card-img' />
         <p className='card-author'>{photo.author}</p>
       </div>
     </a>
