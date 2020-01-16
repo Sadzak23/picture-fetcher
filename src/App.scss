@@ -11,4 +11,15 @@
 .content-container {
   margin: auto;
   width: max-content;
-};
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.loader {
+  color: $primaryColor;
+}

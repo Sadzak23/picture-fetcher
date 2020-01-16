@@ -3,8 +3,14 @@ import './App.scss';
 import { connect } from 'react-redux';
 import { Header, ListView, Footer } from './components';
 
-const App = ({ photos }) => {
-  // const selection1 = photos.
+const filterData = (data, text) => {
+  const include = e => e.toString().toLowerCase().includes(text.toLowerCase())
+  if (!!text) {
+    return data.filter(e => include(e.author, text) || include(e.width, text) || include(e.height, text))
+  } return data
+}
+
+const App = ({ state }) => {
   return (
     <div className="App">
       <Header className='header-container' />
@@ -12,11 +18,11 @@ const App = ({ photos }) => {
         <ListView
           title='Hot Tickets'
           GridView
-          data={photos}
+          data={filterData(state.list1, state.filter)}
         />
         <ListView
           title='Upcoming Events'
-          data={photos}
+          data={filterData(state.list2, state.filter)}
         />
       </div>
       <Footer />
@@ -25,7 +31,7 @@ const App = ({ photos }) => {
 };
 
 const mapStateToProps = (state) => ({
-  photos: state
+  state
 });
 
 export default connect(mapStateToProps)(App)

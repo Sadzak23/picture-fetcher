@@ -3,32 +3,50 @@ import { Title } from './Title';
 import { ListItem } from './ListItem';
 import { Card } from './Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTh, faList, faSortAmountDown } from '@fortawesome/free-solid-svg-icons';
+import { faTh, faList, faSortAmountDown, faSortAmountDownAlt } from '@fortawesome/free-solid-svg-icons';
 
 export const ListView = ({ title, GridView, data }) => {
   const [isGridView, setIsGridView] = useState(GridView)
+  const [sort, setSort] = useState(null)
   const onViewChange = () => setIsGridView(!isGridView)
+  const onSort = () => setSort(sort === 'asc' ? 'des' : 'asc')
+  const sortedData = onSortBy(data, sort)
   return (
     <div>
       <div className='view-title-container'>
         <Title title={title} />
         <div>
+          <button onClick={onSort} className='title-btn'>
+            <FontAwesomeIcon icon={sort === 'asc' ? faSortAmountDownAlt : faSortAmountDown} size='lg' />
+          </button>
           <button onClick={onViewChange} className='title-btn'>
-          <FontAwesomeIcon icon={isGridView ? faList : faTh} size='lg' />
+            <FontAwesomeIcon icon={isGridView ? faList : faTh} size='lg' />
           </button>
         </div>
       </div>
       <div className={isGridView && 'grid'}>
-        {data.map((photo, index) =>
+        {sortedData.map((photo, index) =>
           isGridView ?
             <Card photo={photo} key={photo.id} /> :
             <div key={photo.id}>
               <ListItem photo={photo} />
-              {index !== data.length - 1 && <hr />}
+              {index !== sortedData.length - 1 && <hr />}
             </div>
         )}
       </div>
     </div>
   )
+}
+
+const onSortBy = (data, type) => {
+  if (type === 'asc')
+    return data.sort((a, b) => {
+      return (a.width + a.height) < (b.width + b.height) ? 1 : -1
+    })
+  else if (type === 'des')
+    return data.sort((a, b) => {
+      return (a.width + a.height) > (b.width + b.height) ? 1 : -1
+    })
+  else return data
 }
 

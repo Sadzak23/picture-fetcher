@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { connect } from 'react-redux';
+import { setFilter } from '../redux/actions/actions';
 
-export const SearchBar = () => {
+export const SearchBar = ({ setFilter }) => {
   const [searchVal, setSearchVal] = useState('')
   const onSubmit = () => {
-    console.log(searchVal + ' Submited')
+    setFilter(searchVal)
   }
   return (
     <div className='search-bar'>
@@ -23,3 +25,9 @@ export const SearchBar = () => {
     </div>
   )
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  setFilter: (text) => dispatch(setFilter(text))
+})
+
+export default connect(undefined, mapDispatchToProps)(SearchBar)
