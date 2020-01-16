@@ -1,14 +1,14 @@
 export default (state = [], action) => {
   switch (action.type) {
-    case 'SET_LIST1':
+    case 'SET_HOT_TICKETS':
       return {
         ...state,
-        list1: action.photos
+        hotTickets: action.photos
       }
-    case 'SET_LIST2':
+    case 'SET_UPCOMING_EVENTS':
       return {
         ...state,
-        list2: action.photos
+        upcomingEvents: action.photos
       }
     case 'SET_FILTER':
       return {

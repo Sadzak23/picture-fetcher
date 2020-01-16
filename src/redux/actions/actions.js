@@ -1,10 +1,10 @@
-export const setList1 = (photos) => ({
-  type: 'SET_LIST1',
+export const setHotTickets = (photos) => ({
+  type: 'SET_HOT_TICKETS',
   photos
 });
 
-export const setList2 = (photos) => ({
-  type: 'SET_LIST2',
+export const setUpcomingEvents = (photos) => ({
+  type: 'SET_UPCOMING_EVENTS',
   photos
 });
 
