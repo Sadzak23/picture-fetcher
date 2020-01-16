@@ -17,10 +17,8 @@ export const ListItem = ({ photo }) => {
           <h4>Width: {photo.width}, Height: {photo.height}</h4>
         </div>
       </div>
-      <a href={photo.url} target='_blank'>
-        <button className='list-btn'>Find pics
-          <FontAwesomeIcon icon={faAngleRight} size='xs' />
-        </button>
+      <a className='list-btn' href={photo.url} target='_blank'>
+        Find pics <FontAwesomeIcon icon={faAngleRight} size='xs' />
       </a>
     </div>
   )
